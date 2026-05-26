@@ -1,0 +1,65 @@
+project:
+  name: AgentHub Admin Panel
+  type: static_frontend_prototype
+  goal: Build a professional admin dashboard prototype for an AI agent rental SaaS
+
+stack:
+  html: true
+  tailwind_cdn: true
+  vanilla_javascript: true
+  backend: false
+  frameworks_allowed: false
+  external_css_allowed: false
+  inline_styles_allowed: false
+
+technical_restrictions:
+  frameworks: forbidden
+  backend: forbidden
+  external_css_files: forbidden
+  inline_styles: forbidden
+  data_source: hardcoded_only
+
+required_files:
+  specs: SPECS.md
+  html: index.html
+  context: config/context.md
+  design: config/design.md
+  data: data/agenthub-data.json
+
+sections:
+  - dashboard
+  - users
+  - agents
+  - skills
+  - contracts
+  - error_logs
+
+interactions:
+  dropdowns: required
+  modals: required
+  collapsibles: required
+  dark_mode_toggle: required
+  sidebar_navigation: required
+
+data:
+  source: hardcoded
+  backend_api: false
+  consistency_required: true
+
+acceptance_focus:
+  - specs_committed_before_html
+  - six_sections_present
+  - sidebar_navigation
+  - functional_dropdowns
+  - modal_open_and_close
+  - collapsible_agent_skills
+  - dark_mode_with_tailwind_dark_utilities
+  - semantic_html
+  - desktop_and_tablet_layout
+  - no_frameworks_no_backend
+  - no_external_css_no_inline_styles
+
+quality:
+  readability: high
+  accessibility_baseline: required
+  ui_consistency: required

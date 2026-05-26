@@ -1,0 +1,208 @@
+{
+  "users": [
+    {
+      "id": "USR-001",
+      "fullName": "Lucia Benitez",
+      "email": "lucia.benitez@northlane-demo.com",
+      "company": "Northlane Retail",
+      "role": "Operations Manager",
+      "status": "active"
+    },
+    {
+      "id": "USR-002",
+      "fullName": "Diego Salvatierra",
+      "email": "diego.salvatierra@bluecrest-demo.com",
+      "company": "Bluecrest Logistics",
+      "role": "IT Lead",
+      "status": "active"
+    },
+    {
+      "id": "USR-003",
+      "fullName": "Camila Ortega",
+      "email": "camila.ortega@aurorafin-demo.com",
+      "company": "Aurora Financial",
+      "role": "Compliance Analyst",
+      "status": "active"
+    },
+    {
+      "id": "USR-004",
+      "fullName": "Tomas Ibarra",
+      "email": "tomas.ibarra@sunbridge-demo.com",
+      "company": "Sunbridge Health",
+      "role": "Client Success Lead",
+      "status": "inactive"
+    },
+    {
+      "id": "USR-005",
+      "fullName": "Valentina Rojas",
+      "email": "valentina.rojas@pixelharbor-demo.com",
+      "company": "Pixel Harbor Media",
+      "role": "Product Manager",
+      "status": "active"
+    }
+  ],
+  "skills": [
+    {
+      "id": "SKL-001",
+      "name": "Web Browsing",
+      "category": "Research",
+      "description": "Finds and summarizes public web information."
+    },
+    {
+      "id": "SKL-002",
+      "name": "Document Reading",
+      "category": "Analysis",
+      "description": "Extracts key insights from documents and reports."
+    },
+    {
+      "id": "SKL-003",
+      "name": "Calendar Management",
+      "category": "Productivity",
+      "description": "Schedules, updates, and coordinates calendar events."
+    },
+    {
+      "id": "SKL-004",
+      "name": "Customer Support",
+      "category": "Service",
+      "description": "Handles common support requests and routing."
+    }
+  ],
+  "agents": [
+    {
+      "id": "AGT-001",
+      "name": "Atlas Web Scout",
+      "status": "active",
+      "version": "1.9.2",
+      "skillIds": ["SKL-001", "SKL-002"],
+      "ownerTeam": "Research Ops"
+    },
+    {
+      "id": "AGT-002",
+      "name": "Nova Document Reader",
+      "status": "active",
+      "version": "2.1.0",
+      "skillIds": ["SKL-002"],
+      "ownerTeam": "Compliance Ops"
+    },
+    {
+      "id": "AGT-003",
+      "name": "Kai Calendar Operator",
+      "status": "maintenance",
+      "version": "1.4.7",
+      "skillIds": ["SKL-003"],
+      "ownerTeam": "Internal Productivity"
+    },
+    {
+      "id": "AGT-004",
+      "name": "Vega Support Agent",
+      "status": "active",
+      "version": "3.0.3",
+      "skillIds": ["SKL-004", "SKL-002"],
+      "ownerTeam": "Support Ops"
+    }
+  ],
+  "contracts": [
+    {
+      "id": "CNT-001",
+      "userId": "USR-001",
+      "agentId": "AGT-001",
+      "agentName": "Atlas Web Scout",
+      "skillIds": ["SKL-001"],
+      "plan": "professional",
+      "startDate": "2026-01-15",
+      "endDate": "2026-12-31",
+      "status": "active"
+    },
+    {
+      "id": "CNT-002",
+      "userId": "USR-002",
+      "agentId": "AGT-004",
+      "agentName": "Vega Support Agent",
+      "skillIds": ["SKL-004"],
+      "plan": "enterprise",
+      "startDate": "2026-02-01",
+      "endDate": "2027-01-31",
+      "status": "active"
+    },
+    {
+      "id": "CNT-003",
+      "userId": "USR-003",
+      "agentId": "AGT-002",
+      "agentName": "Nova Document Reader",
+      "skillIds": ["SKL-002"],
+      "plan": "growth",
+      "startDate": "2026-03-10",
+      "endDate": "2026-09-10",
+      "status": "active"
+    },
+    {
+      "id": "CNT-004",
+      "userId": "USR-005",
+      "agentId": "AGT-003",
+      "agentName": "Kai Calendar Operator",
+      "skillIds": ["SKL-003"],
+      "plan": "starter",
+      "startDate": "2026-04-01",
+      "endDate": "2026-10-01",
+      "status": "paused"
+    }
+  ],
+  "errors": [
+    {
+      "id": "ERR-1001",
+      "timestamp": "2026-05-11T09:14:00Z",
+      "severity": "medium",
+      "agentId": "AGT-001",
+      "agentName": "Atlas Web Scout",
+      "contractId": "CNT-001",
+      "message": "Timeout while fetching external website metadata.",
+      "status": "resolved"
+    },
+    {
+      "id": "ERR-1002",
+      "timestamp": "2026-05-12T15:42:00Z",
+      "severity": "high",
+      "agentId": "AGT-004",
+      "agentName": "Vega Support Agent",
+      "contractId": "CNT-002",
+      "message": "Fallback response failed after intent classification mismatch.",
+      "status": "open"
+    },
+    {
+      "id": "ERR-1003",
+      "timestamp": "2026-05-13T08:06:00Z",
+      "severity": "low",
+      "agentId": "AGT-002",
+      "agentName": "Nova Document Reader",
+      "contractId": "CNT-003",
+      "message": "Document parser skipped unsupported embedded format.",
+      "status": "resolved"
+    },
+    {
+      "id": "ERR-1004",
+      "timestamp": "2026-05-14T11:21:00Z",
+      "severity": "critical",
+      "agentId": "AGT-003",
+      "agentName": "Kai Calendar Operator",
+      "contractId": "CNT-004",
+      "message": "Calendar sync token expired and refresh failed.",
+      "status": "investigating"
+    },
+    {
+      "id": "ERR-1005",
+      "timestamp": "2026-05-15T19:33:00Z",
+      "severity": "medium",
+      "agentId": "AGT-004",
+      "agentName": "Vega Support Agent",
+      "contractId": "CNT-002",
+      "message": "Rate limit reached on outbound support notification channel.",
+      "status": "open"
+    }
+  ],
+  "dashboardMetrics": {
+    "monthlyRevenue": 128400,
+    "discountCouponLoss": 7400,
+    "activeAgents": 3,
+    "failingAgents": 2
+  }
+}
